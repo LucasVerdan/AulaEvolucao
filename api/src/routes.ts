@@ -21,7 +21,7 @@ routes.put(
 );
 
 routes.delete(
-  "/students/delete/:id",
+  "/students/delete",
    studentsController.delete
 );
 //? Why not add an update, delete and get one routes/

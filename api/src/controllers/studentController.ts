@@ -22,7 +22,7 @@ export class StudentsController {
   }
 
   async delete(req: Request, res: Response) {
-    await StudentsDB.deleteById(req.params.id);
+    await StudentsDB.deleteById(req.body.id);
 
     return res.status(StatusCodes.ACCEPTED);
   }

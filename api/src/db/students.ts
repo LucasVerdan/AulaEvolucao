@@ -38,7 +38,8 @@ const updateStudentById = (studentToUpdate: Student) => {
 };
 
 const deleteById = (studentId?: string) => { 
-  students.filter((student) => student.id !== Number(studentId));
+  const studentIndex = students.findIndex((student) => student.id === studentId);
+  students.splice(studentIndex, 1);
 
   return true;
 };
