@@ -30,4 +30,11 @@ function addStudent(student: Student) {
  */
 const getStudents = () => Promise.resolve(Object.freeze([...students]));
 
-export { addStudent, getStudents };
+const updateStudentById = (studentToUpdate: Student) => { 
+  const studentIndex = students.findIndex((student) => student.id === studentToUpdate.id);
+  students[studentIndex] = studentToUpdate;
+
+  return true;
+};
+
+export { addStudent, getStudents, updateStudentById };
