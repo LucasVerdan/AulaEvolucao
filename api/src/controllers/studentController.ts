@@ -20,4 +20,10 @@ export class StudentsController {
 
     return res.status(StatusCodes.CREATED);
   }
+
+  async delete(req: Request, res: Response) {
+    await StudentsDB.deleteById(req.params.id);
+
+    return res.status(StatusCodes.ACCEPTED);
+  }
 }

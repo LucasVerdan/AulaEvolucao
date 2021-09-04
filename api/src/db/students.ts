@@ -37,4 +37,11 @@ const updateStudentById = (studentToUpdate: Student) => {
   return true;
 };
 
-export { addStudent, getStudents, updateStudentById };
+const deleteById = (studentId?: string) => { 
+  students.filter((student) => student.id !== Number(studentId));
+
+  return true;
+};
+
+
+export { addStudent, getStudents, updateStudentById, deleteById };
