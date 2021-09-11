@@ -34,14 +34,14 @@ const updateStudentById = (studentToUpdate: Student) => {
   const studentIndex = students.findIndex((student) => student.id === studentToUpdate.id);
   students[studentIndex] = studentToUpdate;
 
-  return true;
+  return Promise.resolve(studentToUpdate);;
 };
 
 const deleteById = (studentId?: string) => { 
   const studentIndex = students.findIndex((student) => student.id === studentId);
   students.splice(studentIndex, 1);
 
-  return true;
+  return Promise.resolve(true);
 };
 
 

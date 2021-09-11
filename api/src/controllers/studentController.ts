@@ -16,14 +16,14 @@ export class StudentsController {
   }
 
   async update(req: Request, res: Response) {
-    await StudentsDB.updateStudentById(req.body);
+     const updatedStudent = await StudentsDB.updateStudentById(req.body);
 
-    return res.status(StatusCodes.CREATED);
+    return res.status(StatusCodes.CREATED).json(updatedStudent);
   }
 
   async delete(req: Request, res: Response) {
-    await StudentsDB.deleteById(req.body.id);
+     await StudentsDB.deleteById(req.body.id);
 
-    return res.status(StatusCodes.ACCEPTED);
+    return res.status(StatusCodes.ACCEPTED).json();
   }
 }
