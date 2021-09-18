@@ -1,6 +1,8 @@
 name: Test and Build
 
-on: [commit]
+on: 
+  push:
+    branches: - main
 
 jobs: 
     test: 
@@ -14,4 +16,3 @@ jobs:
       - run: npm run test
       - run: npm run build
       - run: ls dist
-      
