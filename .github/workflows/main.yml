@@ -1,4 +1,4 @@
-name: Test and Build
+name: Test and Build Back
 
 on: 
   push:
@@ -13,6 +13,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+      - run: cd api    
       - run: npm install
       - run: npm run test
       - run: npm run build
