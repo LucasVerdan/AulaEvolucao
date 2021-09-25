@@ -6,6 +6,7 @@ on:
 
 jobs: 
     test: 
+      - run: cd api    
       runs-on: ubuntu-latest
       steps: 
       - uses: actions/checkout@v2
@@ -13,7 +14,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: cd api    
       - run: npm install
       - run: npm run test
       - run: npm run build
