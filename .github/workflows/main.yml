@@ -13,7 +13,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - working-directory: ./api
+      - name: Set Path
+        run: ls -R
+        working-directory: ./api
       - run: npm install
       - run: npm run test
       - run: npm run build
