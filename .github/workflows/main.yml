@@ -5,10 +5,10 @@ on:
     branches: [ main ]
 
 jobs: 
-    test: 
-      - run: cd api    
+    test:   
       runs-on: ubuntu-latest
       steps: 
+      - run: cd api  
       - uses: actions/checkout@v2
       - name: Use Node.js
         uses: actions/setup-node@v1
