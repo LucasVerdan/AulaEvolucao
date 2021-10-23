@@ -1,4 +1,4 @@
-import { Student } from "./types/Student";
+import { Student } from "./entities/Student";
 
 export const validateUpdateObject = (data: any) => { 
   let dataIsValid = true;
